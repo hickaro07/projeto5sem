@@ -1,0 +1,826 @@
+/* configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 26, 0.85);
+    z-index: -1;
+}
+
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-emblema {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #8B4513, #D2691E);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.emblema-inner {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #8B4513;
+}
+
+.emblema-scissors {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.emblema-scissors::before,
+.emblema-scissors::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #8B4513;
+}
+
+.emblema-scissors::before {
+    width: 30px;
+    height: 5px;
+    top: 15px;
+    left: 2px;
+    transform: rotate(45deg);
+}
+
+.emblema-scissors::after {
+    width: 30px;
+    height: 5px;
+    top: 15px;
+    left: 2px;
+    transform: rotate(-45deg);
+}
+
+.emblema-ring {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border: 2px solid #8B4513;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.emblema-ring::before {
+    content: '•';
+    position: absolute;
+    color: #8B4513;
+    font-size: 8px;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.emblema-ring::after {
+    content: '•';
+    position: absolute;
+    color: #8B4513;
+    font-size: 8px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Logo de imagem */
+.logo-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 150px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-line1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-line2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: -3px;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-year {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 5px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Navegação */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.slide-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.slide-content {
+    max-width: 600px;
+    margin-left: 5%;
+    color: white;
+    z-index: 1;
+}
+
+.slide-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 2rem;
+}
+
+.carousel-controls button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.carousel-controls button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.indicator.active {
+    background: white;
+}
+
+/* Botões */
+.btn, .btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover, .btn-secondary:hover {
+    background-color: #555;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Seção de Serviços */
+.services {
+    padding: 5rem 0;
+    background-color: #f5f5f5;
+}
+
+.services .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.service-card {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.service-card p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+/* Páginas específicas */
+.about-hero, .cuts-hero, .booking-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.about-hero h1, .cuts-hero h1, .booking-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero p, .cuts-hero p, .booking-hero p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about-content, .cuts-content, .booking-content {
+    padding: 4rem 0;
+}
+
+.about-text h2 {
+    margin: 2rem 0 1rem;
+    color: #333;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.invitation {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* Cortes */
+.cuts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.cut-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.cut-card:hover {
+    transform: translateY(-5px);
+}
+
+.cut-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.cut-card:hover .cut-image {
+    transform: scale(1.05);
+}
+
+.cut-info {
+    padding: 1.5rem;
+}
+
+.cut-info h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.cut-details {
+    margin-top: 1rem;
+}
+
+.cut-details h4 {
+    margin: 1rem 0 0.5rem;
+    color: #555;
+}
+
+.cut-details ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+}
+
+.product-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Agendamento */
+.booking-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.booking-info {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.booking-info h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.booking-info ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.booking-info li {
+    margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+/* Logo no rodapé */
+.footer-logo .logo-container {
+    align-items: flex-start;
+}
+
+.footer-logo .logo-emblema {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-logo .emblema-inner {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-logo .emblema-scissors {
+    width: 25px;
+    height: 25px;
+}
+
+.footer-logo .emblema-scissors::before,
+.footer-logo .emblema-scissors::after {
+    width: 20px;
+    height: 4px;
+}
+
+.footer-logo .logo-img {
+    height: 60px;
+}
+
+.footer-logo .logo-line1,
+.footer-logo .logo-line2 {
+    font-size: 1.3rem;
+}
+
+.footer-logo .logo-year {
+    font-size: 0.7rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem;
+    }
+    
+    .services .container {
+        flex-direction: column;
+    }
+    
+    .carousel {
+        height: 50vh;
+    }
+    
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .cuts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-container {
+        gap: 10px;
+    }
+    
+    .logo-emblema {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .emblema-inner {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .emblema-scissors {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo-img {
+        height: 65px;
+    }
+    
+    .logo-line1 {
+        font-size: 1.6rem;
+    }
+    
+    .logo-line2 {
+        font-size: 1.4rem;
+    }
+    
+    .logo-year {
+        font-size: 0.8rem;
+    }
+    
+    .about-hero, .cuts-hero, .booking-hero {
+        padding: 4rem 0;
+    }
+    
+    .about-hero h1, .cuts-hero h1, .booking-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .logo-content {
+        align-items: center;
+        margin-left: 0;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links li {
+        margin: 0.3rem 0;
+    }
+    
+    .logo-emblema {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .emblema-inner {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .emblema-scissors {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .logo-img {
+        height: 50px;
+    }
+}

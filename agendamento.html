@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Barbearia Da-Sul</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+    <div class="logo-container">
+        <!-- Logo de imagem -->
+        <div class="logo-image">
+            <img src="img/Logo.PNG" alt="Barbearia Barea Desda" class="logo-img">
+        </div>
+        
+        <div class="logo-content">
+            <div class="logo-text">
+                <span class="logo-line1">BAREARIA</span>
+                <span class="logo-line2">DA-SUL</span>
+            </div>
+        </div>
+    </div>
+</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="cortes.html">Cortes</a></li>
+                <li><a href="agendamento.html">Agendar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="booking-page">
+        <section class="booking-hero">
+            <h1>Agende seu Horário</h1>
+            <p>Escolha a data e horário que melhor se adequam à sua rotina</p>
+        </section>
+
+        <section class="booking-content">
+            <div class="container">
+                <div class="booking-form">
+                    <form id="appointment-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Serviço Desejado</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="corte">Corte de Cabelo</option>
+                                <option value="barba">Aparar Barba</option>
+                                <option value="combo">Corte + Barba</option>
+                                <option value="sobrancelha">Sobrancelha</option>
+                                <option value="pigmentacao">Pigmentação</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Data Desejada</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Horário Desejado</label>
+                            <select id="time" name="time" required>
+                                <option value="">Selecione um horário</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Observações (opcional)</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Alguma observação específica sobre o corte ou preferências..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Agendar via WhatsApp</button>
+                    </form>
+
+                    <div class="booking-info">
+                        <h3>Informações Importantes</h3>
+                        <ul>
+                            <li>Chegue com 5 minutos de antecedência</li>
+                            <li>Em caso de atraso superior a 15 minutos, o horário poderá ser remarcado</li>
+                            <li>Aceitamos cartões de crédito e débito</li>
+                            <li>Cancelamentos devem ser feitos com pelo menos 2 horas de antecedência</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Endereço: Rua gurreiro, Jardin Rosana</p>
+                <p>Telefone: (11) 94742-3922</p>
+                <p>Email: contatodasul@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Horários</h4>
+                <p>Segunda a Sexta: 9h às 19h</p>
+                <p>Sábado: 9h às 18h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="cortes.html">Cortes</a></li>
+                    <li><a href="agendamento.html">Agendar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Barbearia Da-Sul. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
