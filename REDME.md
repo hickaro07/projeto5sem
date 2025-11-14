@@ -57,4 +57,5 @@ Um website moderno e responsivo para barbearia desenvolvido com HTML5, CSS3 e Ja
 ├── script.js # Funcionalidades JavaScript
 
 - Link do video no Youtube: https://www.youtube.com/watch?v=N5EO_w0xnL0
-- 
+- Link do Site: https://barbeariadasul.netlify.app/
+
