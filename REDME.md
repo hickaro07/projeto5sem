@@ -55,3 +55,6 @@ Um website moderno e responsivo para barbearia desenvolvido com HTML5, CSS3 e Ja
 ├── agendamento.html # Sistema de agendamento
 ├── style.css # Estilos principais
 ├── script.js # Funcionalidades JavaScript
+
+- Link do video no Youtube: https://www.youtube.com/watch?v=N5EO_w0xnL0
+- 
