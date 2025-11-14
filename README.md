@@ -1,10 +1,6 @@
 
 Um website moderno e responsivo para barbearia desenvolvido com HTML5, CSS3 e JavaScript.
 
-## 🚀 Demonstração
-
-![Demo do Site](screnShots/siteBarber.gif)
-
 ## ✨ Funcionalidades
 
 - **🎨 Design Moderno** - Interface limpa e profissional com paleta de cores preto, branco e cinza
