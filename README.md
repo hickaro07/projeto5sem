@@ -3,7 +3,7 @@ Um website moderno e responsivo para barbearia desenvolvido com HTML5, CSS3 e Ja
 
 ## 🚀 Demonstração
 
-![Demo do Site](screnShots/siteBarber.gif)
+![Image](https://github.com/user-attachments/assets/b11538d3-bbb4-4abc-a016-8e24a5b35d92)
 
 ## ✨ Funcionalidades
 
